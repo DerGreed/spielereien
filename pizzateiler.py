@@ -1,7 +1,5 @@
 # Input: Stücke, Personen, Preis, Stücke pro Person
 # Annahmen: 1 Pizza, gleich große Stücke
-# 
-import pdb
 
 people = {}
 
@@ -112,7 +110,6 @@ while pieces_eaten != pieces_total:
             break
     answer = input("Möchstest du die Pizza neu schneiden? ")
     print()
-    # pdb.set_trace()
     if check_answer(answer):
         if check_answer(input("Soll die Pizza vollständig auf alle aufgeteilt werden? ")):
             pieces_total = pieces_eaten
