@@ -5,7 +5,7 @@ movie_list = [
   {"title": "Alien", "rating": 8.5, "year": 1979, "genres": {"Cyberpunk", "Monster Horror", "Space Sci-Fi", "Horror", "Sci-Fi"}},
   {"title": "Aliens", "rating": 8.4, "year": 1986, "genres": {"Alien Invasion", "Cyberpunk", "Monster Horror", "Space Sci-Fi", "Tragedy", "Action", "Adventure", "Horror", "Sci-Fi", "Thriller"}},
   {"title": "Back to the Future", "rating": 8.5, "year": 1985, "genres": {"High-Concept Comedy", "Teen Adventure", "Time Travel", "Urban Adventure", "Adventure", "Comedy", "Sci-Fi"}},
-  {"title": "Inception", "rating": 8.8, "year": 1010, "genres": {"Action Epic", "Adventure Epic", "Epic", "Psychological Thriller", "Sci-Fi Epic", "Action", "Adventure", "Sci-Fi", "Thriller"}},
+  {"title": "Inception", "rating": 8.8, "year": 2010, "genres": {"Action Epic", "Adventure Epic", "Epic", "Psychological Thriller", "Sci-Fi Epic", "Action", "Adventure", "Sci-Fi", "Thriller"}},
   {"title": "Interstellar", "rating": 8.7, "year": 2014, "genres": {"Adventure Epic", "Epic", "Quest", "Sci-Fi Epic", "Space Sci-Fi", "Time Travel", "Acventure", "Drama", "Sci-Fi"}},
   {"title": "The Matrix", "rating": 8.7, "year": 1999, "genres": {"Action Epic", "Artificial Intelligence", "Cyberpunk", "Dystopian Sci-Fi", "Gun Fu", "Martial Arts", "Sci-Fi Epic", "Action", "Sci-Fi"}},
   {"title": "Star Wars: Episode IV - A New Hope", "rating": 8.6, "year": 1977, "genres": {"Action Epic", "Adventure Epic", "Epic", "Fantasy Epic", "Quest", "Sci-Fi Epic", "Space Sci-Fi", "Sword & Sorcery", "Action", "Adventure"}},
@@ -111,13 +111,43 @@ movie_list = [
   {"title": "One Flew Over the Cuckoo's Nest", "rating": 8.7, "year": 1975, "genres": {"Medical Drama", "Psychological Drama", "Drama"}},
   {"title": "12 Angry Men", "rating": 9.0, "year": 1957, "genres": {"Legal Drama", "Psychological Drama", "Crime", "Drama"}}
 ]
-genre_set = set()
-#genre_set.update(*[movie["genres"] for movie in movie_list])
-for movie in movie_list:
-  genre_set.update(movie["genres"])
-print(len(genre_set))
-genre_list = list(genre_set)
-genre_list.sort()
-#for genre in list(genre_set).sort():
-for genre in genre_list:
-  print(genre)
+
+# genre_set = set()
+# genre_set.update(*[movie["genres"] for movie in movie_list])
+# [print(x) for x in sorted(genre_set)]
+
+my_movie_list = movie_list.copy()
+                            
+                 
+                                     
+                        
+              
+
+def list_all(dict_list, key, is_set = False):
+    list_all = [element[key] for element in dict_list]
+    if is_set:
+        my_set = set()
+        my_set.update(*list_all)
+    else:
+        my_set = set(list_all)
+    return sorted(my_set)
+
+def count_all(dict_list, value_list, key, is_set = False):
+    dict_list = []
+    if is_set:
+        count_list = 
+    else:
+        count_list = [len([1 for d in dict_list if value == d[key]]) for value in value_list]
+    return count_list
+sum()
+years = list_all(movie_list, "year")
+ratings = list_all(movie_list, "rating")
+genres = list_all(movie_list, "genres", True)
+
+print("Jahre:   ", years[0], "-", years[-1])
+print("Bewertung:", ratings[0], "-", ratings[-1])
+print("Genres:   ", len(genres))
+
+class test:
+    def __str__(self):
+        print(f"{self.name}")
