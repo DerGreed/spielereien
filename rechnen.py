@@ -53,3 +53,6 @@ Funktionen = [Addition, Subtraktion, Multiplikation, Division]
 print("Zahlen:", str(liste)[1:-1])
 for f in Funktionen:
     print(f.__name__ + ":", f(*liste))
+
+umfang = lambda a,b,c: (s := (a + b + c) / 2, (s * (s - a) * (s - b) * (s - c)) ** 0.5)
+print(umfang(3, 4, 5))

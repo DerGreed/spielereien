@@ -1,4 +1,12 @@
 # Liste der Filme (Beispiel)
+"""Aufbau:
+{
+    "title":    Titel:      str
+    "rating":   Bewertung:  float 0 - 10 
+    "year":     Jahr:       int
+    "genres":   Genres:     set(str, [str])
+}
+"""
 movie_list = [
   {"title": "I'm Still Here", "rating": 8.9, "year": 2024, "genres": {"Docudrama", "Period Drama", "Political Drama", "Biography", "Drama", "History"}},
   {"title": "The Substance", "rating": 7.3, "year": 2024, "genres": {"Body Horror", "Dark Comedy", "Monster Horror", "Psychological Horror", "Showbiz Drama", "Drama", "Horror", "Sci-Fi"}},
@@ -117,13 +125,8 @@ movie_list = [
 # [print(x) for x in sorted(genre_set)]
 
 my_movie_list = movie_list.copy()
-                            
-                 
-                                     
-                        
-              
 
-def list_all(dict_list, key, is_set = False):
+def list_all(dict_list: list[dict], key: str, is_set: bool = False):
     list_all = [element[key] for element in dict_list]
     if is_set:
         my_set = set()
